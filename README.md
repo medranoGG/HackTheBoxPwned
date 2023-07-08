@@ -1,28 +1,40 @@
+<h2 align="center">- HTB MACHINES -</h2>
 
-<h3 align="center">- HTB MACHINES -</h3>
+
+<p align="center">
+Información sobre algunas máquinas de la plataforma Hack The Box
+</p>
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="./_icons/htb.svg" width="18">
+    <img src="./_icons/htb.svg" width="48">
     <img src="./_icons/Linux-Dark.svg" width="48">
+    <img src="./_icons/hack.svg" width="48">
   </a>
 </p>
 
-<h3>Permite:</h3>
 
-- [x] Ejecución uno o varios comandos enlazados con "|".
-- [x] Redirecciones de entrada y salida desde o a ficheros.
-- [x] Ejecución en "background" y listar procesos con jobs.
-
-
-<h3>Compilar:</h3>
+<h4>Configurar HTB-VPN:</h4>
 
 ```
-gcc -Wall -Wextra myshell.c libparser.a -o myshell -static
+sudo openvpn lab.ovpn
+---------------------
+sudo killall openvpn
 ```
 
-<h3>Ejecutar:</h3>
+<h4>Estructura:</h4>
 
-```
-./myshell
-```
+`nmap.txt` -> Info puertos abiertos.  
+`explain.txt` -> Breve explicación. 
+
+
+<h4>Starting Point:</h4>
+
+- [x] 00.Meow - telnet. p23
+- [x] 01.Fawn - ftp / sftp. p21 / p22 
+- [x] 02.Dancing - smbclient. p445 
+- [x] 03.Redeemer - rediris-cli. tcp. p6379
+- [ ] 04. -
+- [ ] 05. -
+- [ ] 06. -
+
