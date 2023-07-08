@@ -1,0 +1,18 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-15 16:37 BST
+Initiating SYN Stealth Scan at 16:37
+Scanning 10.10.11.214 [65535 ports]
+Discovered open port 22/tcp on 10.10.11.214
+Discovered open port 50051/tcp on 10.10.11.214
+Completed SYN Stealth Scan at 16:38, 26.32s elapsed (65535 total ports)
+Nmap scan report for 10.10.11.214
+Host is up, received user-set (0.050s latency).
+Scanned at 2023-06-15 16:37:48 BST for 26s
+Not shown: 65533 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE REASON
+22/tcp    open  ssh     syn-ack ttl 63
+50051/tcp open  unknown syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 26.41 seconds
+           Raw packets sent: 131087 (5.768MB) | Rcvd: 21 (924B)

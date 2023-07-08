@@ -1,0 +1,24 @@
+FAWN:
+----------------
+
+ftp - File Transfer Protocol - 21
+sftp - SSH File Transfer Protocol - 22
+
+1- nmap-version:
+----------------
+nmap -sV 10.129.142.192
+
+2- ftp:
+----------------
+ftp 10.129.153.229
+	----------
+	User -> anonymous ?? Nose por que
+	Password ->
+
+3- dir / ls:
+----------------
+dir o ls para ver los ficheros que tenemos. Vemos un flag.txt.
+
+4- get:
+----------------
+get flag.txt

