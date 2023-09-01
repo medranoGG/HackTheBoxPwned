@@ -32,9 +32,10 @@ sudo killall openvpn
 
 - [x] 00.Meow - telnet. p23
 - [x] 01.Fawn - ftp / sftp. p21 / p22 
-- [x] 02.Dancing - smbclient. p445 
-- [x] 03.Redeemer - rediris-cli. tcp. p6379
-- [ ] 04. -
-- [ ] 05. -
-- [ ] 06. -
-
+- [x] 02.Dancing - p445 / smbclient 
+- [x] 03.Redeemer - p6379 / rediris-cli
+- [x] 04.Appointment - p80 / sql injection
+- [x] 05.Sequel - p80 / mysql / mariadb 
+- [x] 06.Crocodile - ftp / p21, p80 / gobuster
+- [x] 07.Responder - LFI, LFR / responder / johnTheRipper / evil-winrm
+- [x] 08.Three - aws s3 / awscli / php / revershell 
